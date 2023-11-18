@@ -2,74 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Number Generator</title>
-    <!-- Include Inter font from Google Fonts with different weights -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-    <!-- Custom CSS -->
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f4f8;
-        }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Random Number Generator</title>
+	<!-- Include Inter font from Google Fonts with different weights -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+	<!-- Custom CSS -->
+	<style>
+		body {
+			font-family: 'Inter', sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			background-color: #f0f4f8;
+		}
 
-        .random-number {
-            font-size: 10rem;
-            font-weight: 700; /* Set the default weight to bold (700) */
-            margin-bottom: 20px;
-            color: #2d3748;
-            animation: fadeIn 1s ease-in-out;
-        }
+		.random-number {
+			font-size: 10rem;
+			font-weight: 700;
+			margin-bottom: 20px;
+			color: #2d3748;
+			animation: fadeIn 1s ease-in-out;
+		}
 
-        .refresh-button {
-            background-color: #3498db;
-            color: #fff;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+		.refresh-button {
+			background-color: #3498db;
+			color: #fff;
+			padding: 12px 24px;
+			border: none;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		}
 
-        .refresh-button:hover {
-            background-color: #2980b9;
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-        }
+		.refresh-button:hover {
+			background-color: #2980b9;
+			box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+		}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
 
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+			to {
+				opacity: 1;
+			}
+		}
+	</style>
 </head>
 
 <body>
-    <div class="random-number" id="randomNumber">0</div>
-    <button class="refresh-button" onclick="generateRandomNumber()">Refresh</button>
+	<div class="random-number" id="randomNumber">0</div>
+	<button class="refresh-button" onclick="generateRandomNumber()">Refresh</button>
 
-    <script>
-        function generateRandomNumber() {
-            var randomNumber = Math.floor(Math.random() * 100);
-            document.getElementById('randomNumber').innerText = randomNumber;
-        }
-        // Initial random number on page load
-        generateRandomNumber();
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+	<script>
+		function generateRandomNumber() {
+			var randomNumber = Math.floor(((Math.random() * Math.random() + Math.random() * Math.random() + Math.random()) * 100) / 3);
+			document.getElementById('randomNumber').innerText = randomNumber;
+		}
+		// Initial random number on page load
+		generateRandomNumber();
+		window.va = window.va || function() {
+			(window.vaq = window.vaq || []).push(arguments);
+		};
+	</script>
+	<script defer src="/_vercel/insights/script.js"></script>
 </body>
 
 </html>
